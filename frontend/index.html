@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ESPAN | الأعمال الخشبية</title>
+  <meta
+    name="description"
+    content="ESPAN لتنفيذ الأعمال والمنتجات الخشبية حسب الطلب."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Noto+Kufi+Arabic:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="Style.css?v=final13-directsave">
+</head>
+
+<body>
+
+  <!-- شاشة التحميل -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">ESPAN</div>
+
+    <div class="loader-line">
+      <span id="loaderProgress"></span>
+    </div>
+
+    <span class="loader-number" id="loaderNumber">0%</span>
+  </div>
+
+  <!-- مؤشر النزول -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- الهيدر -->
+  <header class="header" id="header">
+    <div class="navbar">
+
+      <a href="#home" class="logo" aria-label="ESPAN">
+        <div class="logo-mark">E</div>
+
+        <div class="logo-content">
+          <strong>ESPAN</strong>
+          <span>WOODWORK</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="active">الرئيسية</a>
+        <a href="#about">من نحن</a>
+                <a href="#works">العروض</a>
+                <a
+  href="auth.html"
+  id="accountButton"
+  class="header-booking open-login"
+>
+  تسجيل الدخول
+</a>
+        <a href="#faq">الأسئلة الشائعة</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+
+      <button class="booking-button open-login">
+        احجز الآن
+      </button>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="فتح القائمة"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- الواجهة الرئيسية -->
+    <section class="hero" id="home">
+      <!-- الفيديو يعمل صامتًا دائمًا -->
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="Images/video_2026-08-02_16-33-34.mp4">
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="hero-label">أعمال خشبية مصنوعة بعناية</span>
+
+        <h1>
+          نصنع من الخشب
+          <em>تفاصيل تدوم</em>
+        </h1>
+
+        <p>
+          نصمم وننفذ قطعًا خشبية مخصصة تجمع بين الجمال،
+          الجودة، والوظيفة بما يناسب مساحتك واحتياجك.
+        </p>
+
+        <button class="hero-button open-login">
+          احجز الآن
+          <span>←</span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- من نحن -->
+    <section class="about section" id="about">
+
+      <div class="section-heading reveal">
+        <span>01 — من نحن</span>
+
+        <h2>
+          نصنع قطعًا خشبية تجمع بين
+          <em>الجمال والجودة</em>
+        </h2>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-image reveal">
+          <img
+            src="Images/ESPAN-logo-transparent.png"
+            alt="ورشة ESPAN للأعمال الخشبية"
+          >
+        </div>
+
+        <div class="about-content reveal">
+          <span class="small-title">ESPAN WOODWORK</span>
+
+          <h3>تفاصيل مصنوعة بعناية لتناسب مساحتك</h3>
+
+          <p>
+            نحرص على أن تكون كل قطعة عملية وأنيقة، وأن تعكس
+            ذوق العميل وتنسجم مع تفاصيل المكان.
+          </p>
+
+          <div class="single-statistic">
+            <strong data-count="100"> 0% </strong>
+            <p>صناعة محلية</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- الأعمال المختارة -->
+    <section class="works section" id="works">
+
+      <div class="section-heading reveal">
+        <span>02 — أعمالنا</span>
+
+        <h2>
+          مجموعة من
+          <em>أعمالنا </em>
+        </h2>
+
+      </div>
+
+      <div class="works-grid">
+
+        <article class="work-card reveal">
+          <div class="work-image">
+            <img
+              src="Images/photo_2026-08-01_20-52-09.jpg"
+              alt="سرير أطفال خشبي"
+            >
+          </div>
+
+          <div class="work-content">
+            <span class="work-category">غرف الأطفال</span>
+            <h3>سرير أطفال بتصميم آمن</h3>
+
+            <p>
+              سرير خشبي منفذ حسب المقاس، بحواف ناعمة وتشطيب
+              هادئ يناسب غرفة الطفل.
+            </p>
+
+            <ul>
+              <li>خشب عالي الجودة</li>
+              <li>لون حسب الاختيار</li>
+              <li>تنفيذ حسب المقاس</li>
+            </ul>
+
+            <div class="work-actions">
+              <button class="reserve-button open-login">
+                احجز هذا العمل
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-image">
+            <img
+              src="Images/photo_2026-08-01_20-52-10.jpg"
+              alt="مرآة أرضية خشبية"
+            >
+          </div>
+
+          <div class="work-content">
+            <span class="work-category">الديكور الداخلي</span>
+            <h3>مرآة أرضية خشبية</h3>
+
+            <p>
+              مرآة طويلة بإطار خشبي أنيق تضيف الدفء والجمال
+              للمداخل وغرف النوم.
+            </p>
+
+            <ul>
+              <li>إطار خشبي متين</li>
+              <li>تشطيب يدوي</li>
+              <li>مقاسات متعددة</li>
+            </ul>
+
+            <div class="work-actions">
+              <button class="reserve-button open-login">
+                احجز هذا العمل
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-image">
+            <img
+              src="Images/photo_2026-08-01_20-52-18.jpg"
+              alt="حامل قرآن خشبي"
+            >
+          </div>
+
+          <div class="work-content">
+            <span class="work-category">قطع مميزة</span>
+            <h3>حامل قرآن خشبي</h3>
+
+            <p>
+              قطعة عملية مصنوعة بتفاصيل خشبية دقيقة للاستخدام
+              اليومي، مع تشطيب أنيق ومتين.
+            </p>
+
+            <ul>
+              <li>نقش دقيق</li>
+              <li>مفصلات قوية</li>
+              <li>تشطيب فاخر</li>
+            </ul>
+
+            <div class="work-actions">
+              <button class="reserve-button open-login">
+                احجز هذا العمل
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-image">
+            <img
+              src="Images/photo_2026-08-01_20-52-13.jpg"
+              alt="فاصل خشبي للمساحات"
+            >
+          </div>
+
+          <div class="work-content">
+            <span class="work-category">تقسيم المساحات</span>
+            <h3>فاصل خشبي للمساحات</h3>
+
+            <p>
+              فاصل ديكوري يمنح المكان خصوصية مع المحافظة على
+              الإضاءة والإحساس بالاتساع.
+            </p>
+
+            <ul>
+              <li>تصميم مخصص</li>
+              <li>ألوان متنوعة</li>
+              <li>تركيب احترافي</li>
+            </ul>
+
+            <div class="work-actions">
+              <button class="reserve-button open-login">
+                احجز هذا العمل
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-image">
+            <img
+              src="Images/photo_2026-08-01_20-52-17.jpg"
+              alt="سلم"
+            >
+          </div>
+
+          <div class="work-content">
+            <span class="work-category"> سلم سهل التخزين</span>
+            <h3> سلم</h3>
+
+            <p>
+سلم خشبي عملي بتصميم أنيق وقابل للطي، مصنوع بعناية من خشب متين ليمنحك الثبات والأمان أثناء الاستخدام. يتميز بسهولة فتحه وإغلاقه، ولا يشغل مساحة كبيرة عند تخزينه، مما يجعله مناسبًا للمنازل والمكاتب والمتاجر.            </p>
+
+            <ul>
+              <li> خشب طبيعي متين</li>
+              <li>تصميم قابل للطي وسهل التخزين</li>
+              <li>درجات عريضة وثابتة </li>
+            </ul>
+
+            <div class="work-actions">
+              <button class="reserve-button open-login">
+                احجز هذا العمل
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- الأسئلة الشائعة -->
+    <section class="faq section" id="faq">
+
+      <div class="section-heading reveal">
+        <span>04 — الأسئلة الشائعة</span>
+        <h2>إجابات عن أكثر الأسئلة شيوعًا</h2>
+      </div>
+
+      <div class="faq-list reveal">
+
+        <details>
+          <summary>
+            هل يمكن تنفيذ تصميم حسب الطلب؟
+            <span>+</span>
+          </summary>
+
+          <p>
+            نعم، يمكن تعديل التصميم والمقاس واللون والخامات
+            بما يناسب طلبك ومساحتك.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            كيف يمكنني حجز عمل؟
+            <span>+</span>
+          </summary>
+
+          <p>
+            اضغطي على زر «احجز الآن»، ثم سجلي الدخول وأرسلي
+            تفاصيل المشروع المطلوب.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            كم يستغرق تنفيذ العمل؟
+            <span>+</span>
+          </summary>
+
+          <p>
+            تختلف المدة حسب حجم العمل وتفاصيله، ويتم تحديد
+            موعد التسليم بعد مراجعة الطلب واعتماد التصميم.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            هل توجد خدمة توصيل ؟
+            <span>+</span>
+          </summary>
+
+          <p>
+            نعم، تتوفر خدمة التوصيل  وفقًا لموقع
+            العميل   .
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- التواصل -->
+    <section class="contact section" id="contact">
+
+      <div class="contact-content reveal">
+        <span>هل لديك فكرة لمشروع خشبي؟</span>
+
+        <h2>دعنا نحوّل فكرتك إلى قطعة مميزة</h2>
+
+        <p>
+          أرسل تفاصيل مشروعك وسنتواصل معك لمناقشة التصميم،
+          المقاس، الخامات وموعد التنفيذ.
+        </p>
+
+        <button class="contact-button open-login">
+          احجز الآن
+          <span>←</span>
+        </button>
+      </div>
+
+      <div class="contact-information reveal">
+        <div>
+          <span>الهاتف</span>
+          <a dir="ltr">092 666 2792</a><br>
+          <a dir="ltr">091 3219196 </a>
+        </div>
+
+        <div>
+          <span> Facebook</span>
+          <a href="https://www.facebook.com/share/1GCEXqNpk1/?mibextid=wwXIfr">Espan</a>
+        </div>
+
+        <div>
+          <span>الموقع</span>
+          <p>طرابلس-ليبيا</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- الفوتر -->
+  <footer class="footer">
+
+    <div class="footer-brand">
+      <div class="logo-mark">E</div>
+      <strong>ESPAN</strong>
+      <p>أعمال خشبية مصنوعة لتدوم.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>روابط سريعة</h3>
+      <a href="#home">الرئيسية</a>
+      <a href="#about">من نحن</a>
+      <a href="#offers">العروض</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>المساعدة</h3>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="#contact">تواصل معنا</a>
+      <button class="open-login">احجز الآن</button>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> ESPAN. جميع الحقوق محفوظة.</p>
+    </div>
+
+  </footer>
+
+  <!-- نافذة تسجيل الدخول -->
+  <div
+    class="modal"
+    id="loginModal"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+  >
+    <div class="modal-card">
+
+      <button
+        class="modal-close"
+        id="modalClose"
+        aria-label="إغلاق"
+      >
+        ×
+      </button>
+
+      <span class="modal-label">الحجز</span>
+      <h2>تسجيل الدخول</h2>
+
+      <p>
+        يرجى تسجيل الدخول أولًا حتى تتمكني من حجز العمل
+        وإرسال تفاصيل مشروعك.
+      </p>
+
+      <form id="loginForm">
+
+        <label for="phone">رقم الهاتف</label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="أدخلي رقم الهاتف"
+          required
+        >
+
+        <label for="password">كلمة المرور</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="أدخلي كلمة المرور"
+          required
+        >
+
+        <button type="submit" class="login-submit">
+          تسجيل الدخول والمتابعة
+        </button>
+
+        <button type="button" class="create-account">
+          إنشاء حساب جديد
+        </button>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="data.js?v=final13-directsave"></script>
+<script src="store.js?v=final-production-cookie-security"></script>
+  <script src="Script.js?v=final13-directsave"></script>
+</body>
+</html>

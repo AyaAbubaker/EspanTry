@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>تسجيل الدخول | ESPAN</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="auth.css?v=final13-directsave">
+</head>
+
+<body>
+
+  <main class="auth-page">
+    <section class="auth-card">
+
+      <!-- الصورة الجانبية -->
+      <div class="auth-visual">
+        <a href="index.html" class="back-home">
+          الرجوع للموقع
+          <span>←</span>
+        </a>
+
+        <div class="auth-brand">
+          <span>ESPAN</span>
+
+          <h2>تفاصيل مصنوعة لتدوم</h2>
+
+          <p>
+            سجّلي دخولك وتابعي حجوزاتك وأعمالك المفضلة بسهولة.
+          </p>
+        </div>
+      </div>
+
+      <!-- جانب النماذج -->
+      <div class="auth-content">
+
+        <div class="auth-logo">ESPAN</div>
+
+        <!-- تسجيل الدخول -->
+        <div
+          class="auth-form-wrapper active"
+          id="loginSection"
+        >
+          <div class="auth-heading">
+            <span class="auth-label">مرحبًا بعودتك</span>
+
+            <h1>تسجيل الدخول</h1>
+
+            <p>
+              أدخلي رقم الهاتف وكلمة المرور للمتابعة.
+            </p>
+          </div>
+
+          <form
+            id="loginForm"
+            class="auth-form"
+            novalidate
+          >
+            <div class="form-group">
+              <label for="loginPhone">رقم الهاتف</label>
+
+              <div class="input-wrapper">
+                <input
+                  type="tel"
+                  id="loginPhone"
+                  name="phone"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  placeholder="مثال: 0912345678"
+                  required
+                >
+
+                <span class="input-icon">☎</span>
+              </div>
+
+              <small
+                class="field-error"
+                id="loginPhoneError"
+              ></small>
+            </div>
+
+            <div class="form-group">
+              <label for="loginPassword">
+                كلمة المرور
+              </label>
+
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  id="loginPassword"
+                  name="password"
+                  autocomplete="current-password"
+                  placeholder="أدخلي كلمة المرور"
+                  minlength="8"
+                  required
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  data-password-target="loginPassword"
+                  aria-label="إظهار كلمة المرور"
+                >
+                  إظهار
+                </button>
+              </div>
+
+              <small
+                class="field-error"
+                id="loginPasswordError"
+              ></small>
+            </div>
+
+            <div class="form-options">
+              <label class="remember-option">
+                <input
+                  type="checkbox"
+                  id="rememberMe"
+                >
+
+                <span>تذكرني</span>
+              </label>
+
+              <a
+                href="#"
+                class="forgot-password"
+              >
+                نسيت كلمة المرور؟
+              </a>
+            </div>
+
+            <div
+              class="form-message"
+              id="loginMessage"
+            ></div>
+
+            <button
+              type="submit"
+              class="auth-submit"
+            >
+              <span>تسجيل الدخول</span>
+              <span class="button-arrow">←</span>
+            </button>
+          </form>
+
+          <p class="switch-auth">
+            ليس لديك حساب؟
+
+            <a
+              href="#registerSection"
+              id="showRegister"
+            >
+              إنشاء حساب جديد
+            </a>
+          </p>
+        </div>
+
+
+        <!-- استرجاع كلمة المرور -->
+        <div
+          class="auth-form-wrapper"
+          id="recoverSection"
+        >
+          <div class="auth-heading">
+            <span class="auth-label">استرجاع الحساب</span>
+
+            <h1>نسيت كلمة المرور؟</h1>
+
+            <p>
+              أدخلي رقم الهاتف ورمز الاسترجاع الذي حصلتِ عليه عند إنشاء الحساب.
+            </p>
+          </div>
+
+          <form
+            id="recoverForm"
+            class="auth-form"
+            novalidate
+          >
+            <div class="form-group">
+              <label for="recoverPhone">رقم الهاتف</label>
+
+              <div class="input-wrapper">
+                <input
+                  type="tel"
+                  id="recoverPhone"
+                  name="phone"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  placeholder="مثال: 0912345678"
+                  required
+                >
+
+                <span class="input-icon">☎</span>
+              </div>
+
+              <small
+                class="field-error"
+                id="recoverPhoneError"
+              ></small>
+            </div>
+
+            <div class="form-group">
+              <label for="recoveryCode">رمز الاسترجاع</label>
+
+              <input
+                type="text"
+                id="recoveryCode"
+                name="recoveryCode"
+                autocomplete="off"
+                placeholder="ESP-XXXX-XXXX"
+                required
+              >
+
+              <small
+                class="field-error"
+                id="recoveryCodeError"
+              ></small>
+            </div>
+
+            <div class="form-group">
+              <label for="recoverPassword">
+                كلمة المرور الجديدة
+              </label>
+
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  id="recoverPassword"
+                  name="newPassword"
+                  autocomplete="new-password"
+                  placeholder="8 أحرف على الأقل"
+                  minlength="8"
+                  required
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  data-password-target="recoverPassword"
+                  aria-label="إظهار كلمة المرور"
+                >
+                  إظهار
+                </button>
+              </div>
+
+              <small
+                class="field-error"
+                id="recoverPasswordError"
+              ></small>
+            </div>
+
+            <div class="form-group">
+              <label for="recoverConfirmPassword">
+                تأكيد كلمة المرور الجديدة
+              </label>
+
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  id="recoverConfirmPassword"
+                  autocomplete="new-password"
+                  placeholder="أعيدي كتابة كلمة المرور"
+                  minlength="8"
+                  required
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  data-password-target="recoverConfirmPassword"
+                  aria-label="إظهار كلمة المرور"
+                >
+                  إظهار
+                </button>
+              </div>
+
+              <small
+                class="field-error"
+                id="recoverConfirmPasswordError"
+              ></small>
+            </div>
+
+            <div
+              class="form-message"
+              id="recoverMessage"
+            ></div>
+
+            <button
+              type="submit"
+              class="auth-submit"
+            >
+              <span>تغيير كلمة المرور</span>
+              <span class="button-arrow">←</span>
+            </button>
+          </form>
+
+          <p class="switch-auth">
+            تذكرتِ كلمة المرور؟
+
+            <a
+              href="#loginSection"
+              id="backToLogin"
+            >
+              تسجيل الدخول
+            </a>
+          </p>
+        </div>
+
+        <!-- إنشاء الحساب -->
+        <div
+          class="auth-form-wrapper"
+          id="registerSection"
+        >
+          <div class="auth-heading">
+            <span class="auth-label">انضمي إلينا</span>
+
+            <h1>إنشاء حساب</h1>
+
+            <p>
+              أدخلي بياناتك لإنشاء حساب جديد.
+            </p>
+          </div>
+
+          <form
+            id="registerForm"
+            class="auth-form"
+            novalidate
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">
+                  الاسم الكامل
+                </label>
+
+                <input
+                  type="text"
+                  id="fullName"
+                  name="full_name"
+                  autocomplete="name"
+                  placeholder="الاسم الكامل"
+                  minlength="3"
+                  required
+                >
+
+                <small
+                  class="field-error"
+                  id="fullNameError"
+                ></small>
+              </div>
+
+              <div class="form-group">
+                <label for="registerPhone">
+                  رقم الهاتف
+                </label>
+
+                <input
+                  type="tel"
+                  id="registerPhone"
+                  name="phone"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  placeholder="0912345678"
+                  required
+                >
+
+                <small
+                  class="field-error"
+                  id="registerPhoneError"
+                ></small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">المدينة</label>
+
+                <select
+                  id="city"
+                  name="city"
+                  required
+                >
+                  <option value="">
+                    اختاري المدينة
+                  </option>
+
+                  <option value="طرابلس">طرابلس</option>
+                  <option value="بنغازي">بنغازي</option>
+                  <option value="مصراتة">مصراتة</option>
+                  <option value="الزاوية">الزاوية</option>
+                  <option value="سبها">سبها</option>
+                  <option value="البيضاء">البيضاء</option>
+                  <option value="أخرى">مدينة أخرى</option>
+                </select>
+
+                <small
+                  class="field-error"
+                  id="cityError"
+                ></small>
+              </div>
+
+              <div class="form-group">
+                <label for="address">العنوان</label>
+
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  autocomplete="street-address"
+                  placeholder="المنطقة والشارع"
+                  required
+                >
+
+                <small
+                  class="field-error"
+                  id="addressError"
+                ></small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="registerPassword">
+                  كلمة المرور
+                </label>
+
+                <div class="input-wrapper">
+                  <input
+                    type="password"
+                    id="registerPassword"
+                    name="password"
+                    autocomplete="new-password"
+                    placeholder="8 أحرف على الأقل"
+                    minlength="8"
+                    required
+                  >
+
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    data-password-target="registerPassword"
+                    aria-label="إظهار كلمة المرور"
+                  >
+                    إظهار
+                  </button>
+                </div>
+
+                <small
+                  class="field-error"
+                  id="registerPasswordError"
+                ></small>
+              </div>
+
+              <div class="form-group">
+                <label for="confirmPassword">
+                  تأكيد كلمة المرور
+                </label>
+
+                <div class="input-wrapper">
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="password_confirmation"
+                    autocomplete="new-password"
+                    placeholder="أعيدي كتابة كلمة المرور"
+                    required
+                  >
+
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    data-password-target="confirmPassword"
+                    aria-label="إظهار كلمة المرور"
+                  >
+                    إظهار
+                  </button>
+                </div>
+
+                <small
+                  class="field-error"
+                  id="confirmPasswordError"
+                ></small>
+              </div>
+            </div>
+
+            <label class="terms-option">
+              <input
+                type="checkbox"
+                id="acceptTerms"
+                required
+              >
+
+              <span>
+                أوافق على
+                <a href="#">الشروط والأحكام</a>
+                وسياسة الخصوصية.
+              </span>
+            </label>
+
+            <div
+              class="form-message"
+              id="registerMessage"
+            ></div>
+
+            <button
+              type="submit"
+              class="auth-submit"
+            >
+              <span>إنشاء الحساب</span>
+              <span class="button-arrow">←</span>
+            </button>
+          </form>
+
+          <p class="switch-auth">
+            لديك حساب بالفعل؟
+
+            <a
+              href="#loginSection"
+              id="showLogin"
+            >
+              تسجيل الدخول
+            </a>
+          </p>
+        </div>
+
+
+
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js?v=final13-directsave"></script>
+<script src="store.js?v=final-production-cookie-security"></script>
+<script src="auth.js?v=final15-recovery" defer></script>
+</body>
+</html>

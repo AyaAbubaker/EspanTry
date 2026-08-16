@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منصة التوصيل | ESPAN</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="delivery.css?v=final14-security-functional-fix">
+</head>
+
+<body>
+
+  <header class="delivery-header">
+    <a href="index.html" class="delivery-brand">
+      <img src="Images/ESPAN-logo-transparent.png" alt="ESPAN">
+      <div>
+        <strong>ESPAN</strong>
+        <span>منصة التوصيل</span>
+      </div>
+    </a>
+
+    <div class="delivery-user">
+      <span id="deliveryName"></span>
+      <button id="logoutButton">تسجيل الخروج</button>
+    </div>
+  </header>
+
+  <main class="delivery-main">
+
+    <section class="delivery-hero">
+      <div>
+        <span id="todayLabel"></span>
+        <h1>طلبات التوصيل</h1>
+        <p>تابع الطلبات المسندة إليك، ابدأ التوصيل ثم أكد التسليم.</p>
+      </div>
+
+      <div class="delivery-stats" id="deliveryStats"></div>
+    </section>
+
+    <nav class="delivery-tabs">
+      <button class="active" data-tab="mine">طلباتي الحالية</button>
+      <button data-tab="delivered">تم تسليمها</button>
+      <button data-tab="profile">بياناتي</button>
+    </nav>
+
+    <section id="deliveryContent"></section>
+
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="data.js?v=final14-security-functional-fix"></script>
+  <script src="store.js?v=final-production-cookie-security"></script>
+  <script src="push-client.js?v=final14-security-functional-fix" defer></script>
+  <script src="delivery.js?v=final14-security-functional-fix"></script>
+
+</body>
+</html>

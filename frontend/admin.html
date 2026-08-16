@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة الإدارة | ESPAN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Noto+Kufi+Arabic:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css?v=final13-directsave">
+</head>
+<body>
+  <div class="admin-app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html" aria-label="ESPAN">
+        <img src="Images/ESPAN-logo-transparent.png" alt="ESPAN">
+        <div><strong>ESPAN</strong><span>لوحة الإدارة</span></div>
+      </a>
+
+      <nav class="side-nav" id="sideNav">
+        <button class="active" data-view="dashboard"><span>⌂</span> نظرة عامة</button>
+        <button data-view="products"><span>▦</span> المنتجات والمخزون</button>
+        <button data-view="orders"><span>▣</span> الطلبات <b id="ordersBadge">0</b></button>
+        <button data-view="offers"><span>٪</span> العروض</button>
+        <button data-view="complaints"><span>◌</span> الشكاوى <b id="complaintsBadge">0</b></button>
+        <button data-view="users"><span>♙</span> المستخدمون والصلاحيات</button>
+        <button data-view="collections"><span>د.ل</span> التحصيلات</button>
+        <button data-view="audit"><span>≡</span> سجل النشاط</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="admin-mini"><span class="avatar" id="sidebarAvatar">E</span><div><strong id="sidebarName">مدير ESPAN</strong><small>مدير النظام</small></div></div>
+        <button id="logoutButton" class="logout-button">تسجيل الخروج</button>
+      </div>
+    </aside>
+
+    <section class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">☰</button>
+        <div class="topbar-title"><span id="todayLabel"></span><h1 id="viewTitle">نظرة عامة</h1></div>
+        <div class="topbar-actions">
+<button class="notification-button" id="notificationButton" aria-label="الإشعارات">♢<b id="notificationCount">0</b></button>
+        </div>
+      </header>
+
+      <main id="adminContent" class="admin-content"></main>
+    </section>
+  </div>
+
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="notification-drawer" id="notificationDrawer">
+    <div class="drawer-head"><div><span>مركز التنبيهات</span><h2>الإشعارات</h2></div><button id="closeNotifications">×</button></div>
+    <button class="mark-all" id="markAllNotifications">تحديد الكل كمقروء</button>
+    <div id="notificationList" class="notification-list"></div>
+  </aside>
+
+  <div class="modal" id="appModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head"><div><span id="modalLabel">ESPAN</span><h2 id="modalTitle">إضافة</h2></div><button id="modalClose" aria-label="إغلاق">×</button></div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="data.js?v=final13-directsave"></script>
+<script src="store.js?v=final-production-cookie-security"></script>
+  <script src="push-client.js?v=final13-directsave" defer></script>
+  <script src="admin.js?v=final13-directsave" defer></script>
+</body>
+</html>

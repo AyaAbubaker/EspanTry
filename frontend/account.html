@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>متجر وحسابي | ESPAN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="account.css?v=final13-directsave">
+</head>
+<body>
+  <header class="account-header">
+    <a class="account-brand" href="index.html"><img src="Images/ESPAN-logo-transparent.png" alt="ESPAN"></a>
+    <nav class="main-menu" id="mainMenu">
+      <button class="active" data-view="products">المنتجات</button>
+      <button data-view="cart">السلة <span id="cartCount">0</span></button>
+      <button data-view="favorites">المفضلة <span id="favoriteCount">0</span></button>
+      <button data-view="notifications">الإشعارات <span id="notificationCount">0</span></button>
+      <button data-view="account">حسابي</button>
+    </nav>
+</header>
+
+  <main class="account-shell">
+    <section class="welcome-row">
+      <div><span>ESPAN WOODWORK</span><h1 id="pageTitle">المنتجات</h1></div>
+      <p id="pageIntro">تصفحي المنتجات والعروض وأضيفي أكثر من منتج للسلة.</p>
+    </section>
+    <section id="viewContent" class="view-content"></section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="data.js?v=final13-directsave"></script>
+<script src="store.js?v=final-production-cookie-security"></script>
+  <script src="push-client.js?v=final13-directsave" defer></script>
+  <script src="account.js?v=final13-directsave" defer></script>
+</body>
+</html>
