@@ -1,0 +1,3 @@
+ESPAN Final Client Release
+Security profile: final-production-cookie-security
+Date: 2026-08-16
